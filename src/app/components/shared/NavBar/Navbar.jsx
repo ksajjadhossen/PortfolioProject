@@ -11,7 +11,7 @@ function Navbar() {
   const navLinks = ["Home", "Projects", "Blogs", "Contact"];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 py-4 px-6 lg:px-12 bg-[#1B1B1B]/80 backdrop-blur-md border-b border-white/5">
+    <nav className="fixed top-0 left-0 w-full z-50 py-4 px-6 lg:px-12 bg-[#1B1B1B]/80 backdrop-blur-md border-white/5">
       <div className="max-w-360 mx-auto flex items-center justify-between">
         {/* --- Logo Section --- */}
         <Link href="/" className="flex items-center gap-3">
@@ -30,7 +30,10 @@ function Navbar() {
         </Link>
 
         {/* --- Desktop Navigation (Hidden on Mobile) --- */}
-        <div className="hidden lg:flex items-center bg-[#11141b] border border-white/5 rounded-full p-1 shadow-2xl">
+        <div
+          className="hidden lg:flex items-center     >
+ border border-white/5 rounded-full p-1 shadow-2xl"
+        >
           <ul className="flex items-center gap-1">
             {navLinks.map((link) => (
               <li key={link}>

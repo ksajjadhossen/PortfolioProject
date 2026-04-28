@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-// react-icons থেকে আইকন ইমপোর্ট
 import { FaGithub, FaTwitter, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
