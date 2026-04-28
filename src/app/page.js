@@ -4,6 +4,8 @@ import ScrollingTicker from "./components/ScrollingTicker/ScrollingTicker";
 import Skills from "./components/Skills/Skills";
 import Experience from "./components/Experience/Experience";
 import Education from "./components/Education/Education";
+import Portfolio from "./components/Portfolio/Portfolio";
+import Contact from "./components/Contact/Contact";
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <ScrollingTicker></ScrollingTicker>
       <Skills></Skills>
       <Education></Education>
+      <Portfolio></Portfolio>
+      <Contact></Contact>
     </div>
   );
 }
