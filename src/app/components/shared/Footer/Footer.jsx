@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,30 +9,36 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#1B1B1B] text-white py-12 px-6 lg:px-12 border-t border-white/5">
-      <div className="max-w-360 mx-auto">
+      <div className="max-w-[1440px] mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-10">
+          {/* Logo Section */}
           <div className="flex items-center gap-3">
-            <div className=" h-10 w-10 border  rounded-xl flex items-center justify-center">
-              <Image
-                src="/logo.png"
-                alt="Logo"
-                width={100}
-                height={100}
-                className="object-contain"
-              />
-            </div>
-            <span className="text-xl font-semibold tracking-tight">Sajjad</span>
+            <Link href="#Home" className="flex items-center gap-3">
+              <div className="h-10 w-10 border border-white/10 rounded-xl flex items-center justify-center bg-white/5">
+                <Image
+                  src="/logo.png"
+                  alt="Logo"
+                  width={40}
+                  height={40}
+                  className="object-contain"
+                />
+              </div>
+              <span className="text-xl font-semibold tracking-tight">
+                Sajjad
+              </span>
+            </Link>
           </div>
 
+          {/* Navigation Links - Exactly like your UI */}
           <ul className="flex items-center gap-6 text-gray-400 font-medium">
             <li>
-              <Link href="#home" className="hover:text-white transition-colors">
+              <Link href="#Home" className="hover:text-white transition-colors">
                 Home
               </Link>
             </li>
             <li>
               <Link
-                href="#projects"
+                href="#Projects"
                 className="hover:text-white transition-colors"
               >
                 Projects
@@ -39,7 +46,7 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                href="#blogs"
+                href="#Blogs"
                 className="hover:text-white transition-colors"
               >
                 Blogs
@@ -47,7 +54,7 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                href="#contact"
+                href="#Contact"
                 className="hover:text-white transition-colors"
               >
                 Contact
@@ -55,6 +62,7 @@ const Footer = () => {
             </li>
           </ul>
 
+          {/* Social Icons */}
           <div className="flex items-center gap-5 text-xl text-gray-400">
             <a
               href={`https://github.com/${username}`}
