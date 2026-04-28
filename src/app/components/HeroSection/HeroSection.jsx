@@ -14,7 +14,12 @@ import ScrollingTicker from "../ScrollingTicker/ScrollingTicker";
 
 const Hero = () => {
   const username = "ksajjadhossen";
-
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="">
       <section
@@ -58,18 +63,21 @@ const Hero = () => {
 
             {/* Buttons */}
             <div className="flex flex-wrap items-center gap-3 mt-2">
-              <Link
-                href="#contact"
+              {/* Contact Button */}
+              <button
+                onClick={() => handleScroll("Contact")} // আইডি "Contact" এর সাথে মিল থাকতে হবে
                 className="bg-white text-black px-6 py-2.5 rounded-xl font-bold text-xs hover:bg-gray-200 transition-all shadow-lg"
               >
                 Let's Work Together
-              </Link>
-              <Link
-                href="#projects"
+              </button>
+
+              {/* Projects Button */}
+              <button
+                onClick={() => handleScroll("Projects")} // আইডি "Projects" এর সাথে মিল থাকতে হবে
                 className="bg-[#242424] text-white border border-white/5 px-6 py-2.5 rounded-xl font-bold text-xs hover:bg-white/5 transition-all"
               >
                 View Projects
-              </Link>
+              </button>
             </div>
 
             {/* Social Icons */}

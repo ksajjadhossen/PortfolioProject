@@ -10,12 +10,25 @@ import Contact from "./components/Contact/Contact";
 export default function Home() {
   return (
     <div className="">
-      <Hero></Hero>
-      <ScrollingTicker></ScrollingTicker>
-      <Skills></Skills>
-      <Education></Education>
-      <Portfolio></Portfolio>
-      <Contact></Contact>
+      <div className="scroll-smooth">
+        <div id="Home">
+          <Hero />
+        </div>
+        <ScrollingTicker />
+        <div id="Skills">
+          <Skills />
+        </div>
+        <div id="Education">
+          <Education />
+        </div>
+        <div id="Projects">
+          <Portfolio />
+        </div>
+        <div id="Blogs"></div>
+        <div id="Contact">
+          <Contact />
+        </div>
+      </div>
     </div>
   );
 }
