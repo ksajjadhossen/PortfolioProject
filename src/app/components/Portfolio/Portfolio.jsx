@@ -7,9 +7,9 @@ import { FiGithub, FiArrowUpRight } from "react-icons/fi";
 const Portfolio = () => {
   const projects = [
     {
-      title: "TechTips Hub",
+      title: "NextGear",
       description:
-        "Advanced blogging platform with premium content and user interactions.",
+        "Dynamic e-commerce platform for trendy gear, built with Next.js and fake data.",
       image: "/nextGear.png",
       tech: ["Next.js", "Fake Data"],
       github: "https://github.com/ksajjadhossen/NextGear",
