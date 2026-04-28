@@ -22,7 +22,7 @@ function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 py-4 px-6 lg:px-12 bg-[#1B1B1B]/80 backdrop-blur-md border-white/5">
-      <div className="max-w-[1440px] mx-auto flex items-center justify-between">
+      <div className="max-w-360 mx-auto flex items-center justify-between">
         {/* --- Logo Section --- */}
         <Link
           href="/"
@@ -72,7 +72,7 @@ function Navbar() {
             onClick={() => handleScroll("Contact")}
             className="hidden sm:block bg-white text-black px-7 py-2.5 rounded-full font-bold text-sm hover:bg-gray-200 transition-all shadow-lg"
           >
-            Contact
+            Download CV
           </button>
 
           <button
@@ -107,7 +107,7 @@ function Navbar() {
                 onClick={() => handleScroll("Contact")}
                 className="block w-full text-center bg-white text-black py-4 rounded-xl font-bold transition-all active:scale-95"
               >
-                Let's Work Together
+                Download CV
               </button>
             </li>
           </ul>
