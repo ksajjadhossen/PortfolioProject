@@ -10,10 +10,10 @@ const Portfolio = () => {
       title: "TechTips Hub",
       description:
         "Advanced blogging platform with premium content and user interactions.",
-      image: "/tech-tips.png",
-      tech: ["Next.js", "MongoDB"],
-      github: "#",
-      live: "#",
+      image: "/nextGear.png",
+      tech: ["Next.js", "Fake Data"],
+      github: "https://github.com/ksajjadhossen/NextGear",
+      live: "https://next-gear-iota.vercel.app/",
     },
     {
       title: "Artists Web",
