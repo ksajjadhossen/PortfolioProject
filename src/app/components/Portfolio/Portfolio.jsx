@@ -15,24 +15,7 @@ const Portfolio = () => {
       github: "https://github.com/ksajjadhossen/NextGear",
       live: "https://next-gear-iota.vercel.app/",
     },
-    {
-      title: "Artists Web",
-      description:
-        "Modern digital agency website showcasing creative portfolio highlights.",
-      image: "/artists-web.png",
-      tech: ["Next.js", "Tailwind"],
-      github: "#",
-      live: "#",
-    },
-    {
-      title: "Luxe Maison",
-      description:
-        "Elegant e-commerce for luxury home decor with clean, smooth design.",
-      image: "/luxe-maison.png",
-      tech: ["Next.js", "TypeScript"],
-      github: "#",
-      live: "#",
-    },
+    // আপনি চাইলে এখানে আরও প্রোজেক্ট অবজেক্ট যোগ করতে পারেন
   ];
 
   return (
@@ -50,7 +33,8 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* --- প্রধান পরিবর্তন এখানে --- */}
+        <div className="flex flex-wrap justify-center gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -58,7 +42,8 @@ const Portfolio = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-[#1B1B1B] border border-white/5 rounded-xl overflow-hidden group hover:border-white/20 transition-all duration-300"
+              /* w-full md:w-[calc(50%-1rem)] lg:max-w-[350px] ব্যবহার করা হয়েছে যাতে কার্ডগুলো রেসপনসিভ হয় এবং মাঝখানে থাকে */
+              className="bg-[#1B1B1B] border border-white/5 rounded-xl overflow-hidden group hover:border-white/20 transition-all duration-300 w-full md:w-[calc(50%-1rem)] lg:max-w-[380px] flex-shrink-0"
             >
               <div className="relative aspect-video w-full overflow-hidden">
                 <Image
@@ -79,12 +64,16 @@ const Portfolio = () => {
                   <div className="flex gap-3">
                     <a
                       href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-gray-500 hover:text-white transition-colors"
                     >
                       <FiGithub size={18} />
                     </a>
                     <a
                       href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-gray-500 hover:text-white transition-colors"
                     >
                       <FiArrowUpRight size={20} />
@@ -96,7 +85,6 @@ const Portfolio = () => {
                   {project.description}
                 </p>
 
-                {/* টেকনোলজি ব্যাজ - ছোট এবং ক্লিন */}
                 <div className="flex flex-wrap gap-2 pt-2">
                   {project.tech.map((t) => (
                     <span
@@ -111,6 +99,7 @@ const Portfolio = () => {
             </motion.div>
           ))}
         </div>
+        {/* ------------------------- */}
       </div>
     </section>
   );
