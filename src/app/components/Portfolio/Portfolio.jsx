@@ -9,9 +9,9 @@ const Portfolio = () => {
     {
       title: "NextGear",
       description:
-        "Dynamic e-commerce platform for trendy gear, built with Next.js and fake data.",
+        "Dynamic e-commerce platform for trendy gear, built with Next.js and MongoDB,shopping cart, user authentication and authorization.",
       image: "/nextGear.png",
-      tech: ["Next.js", "Fake Data"],
+      tech: ["Next.js", "MongoDB", "Tailwind CSS"],
       github: "https://github.com/ksajjadhossen/NextGear",
       live: "https://next-gear-iota.vercel.app/",
     },
