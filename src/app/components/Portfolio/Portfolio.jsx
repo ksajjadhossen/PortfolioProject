@@ -15,7 +15,15 @@ const Portfolio = () => {
       github: "https://github.com/ksajjadhossen/NextGear",
       live: "https://next-gear-iota.vercel.app/",
     },
-    // আপনি চাইলে এখানে আরও প্রোজেক্ট অবজেক্ট যোগ করতে পারেন
+    {
+      title: "Folioly",
+      description:
+        "Curated developer portfolio discovery platform built with Next.js and Tailwind CSS, featuring advanced filtering, bookmarking, category-based exploration, search functionality, pagination, and dark/light theme support.",
+      image: "/folioly.png",
+      tech: ["Next.js", "Tailwind CSS"],
+      github: "https://github.com/ksajjadhossen/Folioly",
+      live: "https://folioly.vercel.app/",
+    },
   ];
 
   return (
