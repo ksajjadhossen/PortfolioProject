@@ -8,16 +8,24 @@ function Navbar() {
   const [active, setActive] = useState("Home");
   const [isOpen, setIsOpen] = useState(false);
 
+  // আপনার গুগল ড্রাইভ লিঙ্কটিকে ডিরেক্ট ডাউনলোড লিঙ্কে রূপান্তর করা হয়েছে
+  const CV_DOWNLOAD_URL =
+    "https://drive.google.com/uc?export=download&id=1vQBeULCjdZ_LcyclMSIY36DWPuoqULly";
+
   const navLinks = ["Home", "Projects", "Blogs", "Contact"];
 
-  // স্ক্রলিং হ্যান্ডেল করার ফাংশন
   const handleScroll = (id) => {
     setActive(id);
-    setIsOpen(false); // মোবাইল মেনু বন্ধ করার জন্য
+    setIsOpen(false);
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  // সিডি ডাউনলোড হ্যান্ডলার
+  const handleDownloadCV = () => {
+    window.open(CV_DOWNLOAD_URL, "_blank");
   };
 
   return (
@@ -69,7 +77,7 @@ function Navbar() {
         {/* --- Right Section --- */}
         <div className="flex items-center gap-4">
           <button
-            onClick={() => handleScroll("Contact")}
+            onClick={handleDownloadCV} // এখানে ক্লিক করলে ডাউনলোড হবে
             className="hidden sm:block bg-white text-black px-7 py-2.5 rounded-full font-bold text-sm hover:bg-gray-200 transition-all shadow-lg"
           >
             Download CV
@@ -104,7 +112,7 @@ function Navbar() {
             ))}
             <li className="pt-4 border-t border-white/5">
               <button
-                onClick={() => handleScroll("Contact")}
+                onClick={handleDownloadCV} // মোবাইল মেনুর ডাউনলোড বাটন
                 className="block w-full text-center bg-white text-black py-4 rounded-xl font-bold transition-all active:scale-95"
               >
                 Download CV
