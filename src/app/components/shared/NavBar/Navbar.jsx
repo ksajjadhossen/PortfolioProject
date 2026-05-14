@@ -12,7 +12,7 @@ function Navbar() {
   const CV_DOWNLOAD_URL =
     "https://drive.google.com/uc?export=download&id=1vQBeULCjdZ_LcyclMSIY36DWPuoqULly";
 
-  const navLinks = ["Home", "Projects", "Blogs", "Contact"];
+  const navLinks = ["Home", "Projects", "Contact"];
 
   const handleScroll = (id) => {
     setActive(id);
