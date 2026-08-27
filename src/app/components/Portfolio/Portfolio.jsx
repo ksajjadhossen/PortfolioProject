@@ -4,31 +4,54 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { FiGithub, FiArrowUpRight } from "react-icons/fi";
 
-const Portfolio = () => {
-  const projects = [
-    {
-      title: "NextGear",
-      description:
-        "Dynamic e-commerce platform for trendy gear, built with Next.js and MongoDB,shopping cart, user authentication and authorization.",
-      image: "/nextGear.png",
-      tech: ["Next.js", "MongoDB", "Tailwind CSS"],
-      github: "https://github.com/ksajjadhossen/NextGear",
-      live: "https://next-gear-iota.vercel.app/",
-    },
-    {
-      title: "Folioly",
-      description:
-        "Curated developer portfolio discovery platform built with Next.js and Tailwind CSS, featuring advanced filtering, bookmarking, category-based exploration, search functionality, pagination, and dark/light theme support.",
-      image: "/folioly.png",
-      tech: ["Next.js", "Tailwind CSS"],
-      github: "https://github.com/ksajjadhossen/Folioly",
-      live: "https://folioly.vercel.app/",
-    },
-  ];
+const projects = [
+  {
+    title: "Formcraft AI",
+    description:
+      "Enterprise-grade, full-stack AI-driven SaaS platform for instant interactive form generation using natural language processing, dynamic field configuration, and real-time response management.",
+    image: "/formcraft.png",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "MongoDB",
+      "Clerk",
+      "Stripe",
+    ],
+    github: "https://github.com/ksajjadhossen/formcraft-ai",
+    live: "https://formcraft-ai-k.vercel.app/",
+  },
+  {
+    title: "Next Gear",
+    description:
+      "Premium full-stack e-commerce platform built with Next.js 15 App Router, featuring secure Clerk Authentication, Role-Based Access Control (RBAC), and an authorized Admin Dashboard with real-time CRUD controls.",
+    image: "/nextGear.png",
+    tech: [
+      "Next.js 15",
+      "TypeScript",
+      "Tailwind CSS",
+      "MongoDB",
+      "Mongoose",
+      "Clerk",
+    ],
+    github: "https://github.com/ksajjadhossen/NextGear",
+    live: "https://next-gear-iota.vercel.app/",
+  },
+  {
+    title: "/TaskFlow",
+    description:
+      "High-performance, production-ready Kanban task management board featuring a smooth 5-stage drag-and-drop workflow, multi-tab synchronization via BroadcastChannel API, and advanced undo/redo history.",
+    image: "/taskflow.png",
+    tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "BroadcastChannel API"],
+    github: "https://github.com/ksajjadhossen/taskflow",
+    live: "https://taskflow-personal-app.vercel.app/",
+  },
+];
 
+const Portfolio = () => {
   return (
     <section id="portfolio" className="bg-[#1B1B1B] py-20 px-6 text-white">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 space-y-2">
           <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500">
             Portfolio
@@ -41,8 +64,7 @@ const Portfolio = () => {
           </p>
         </div>
 
-        {/* --- প্রধান পরিবর্তন এখানে --- */}
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -50,8 +72,7 @@ const Portfolio = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              /* w-full md:w-[calc(50%-1rem)] lg:max-w-[350px] ব্যবহার করা হয়েছে যাতে কার্ডগুলো রেসপনসিভ হয় এবং মাঝখানে থাকে */
-              className="bg-[#1B1B1B] border border-white/5 rounded-xl overflow-hidden group hover:border-white/20 transition-all duration-300 w-full md:w-[calc(50%-1rem)] lg:max-w-[380px] flex-shrink-0"
+              className="bg-[#1B1B1B] border border-white/5 rounded-xl overflow-hidden group hover:border-white/20 transition-all duration-300 w-full max-w-[380px]"
             >
               <div className="relative aspect-video w-full overflow-hidden">
                 <Image
@@ -107,7 +128,6 @@ const Portfolio = () => {
             </motion.div>
           ))}
         </div>
-        {/* ------------------------- */}
       </div>
     </section>
   );
