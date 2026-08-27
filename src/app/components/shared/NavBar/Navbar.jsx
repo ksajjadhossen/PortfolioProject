@@ -8,9 +8,8 @@ function Navbar() {
   const [active, setActive] = useState("Home");
   const [isOpen, setIsOpen] = useState(false);
 
-  // আপনার গুগল ড্রাইভ লিঙ্কটিকে ডিরেক্ট ডাউনলোড লিঙ্কে রূপান্তর করা হয়েছে
   const CV_DOWNLOAD_URL =
-    "https://drive.google.com/uc?export=download&id=1vQBeULCjdZ_LcyclMSIY36DWPuoqULly";
+    "https://drive.google.com/file/d/1MdyUrRiRkumMOOfjzMJ2EWfGdmcoJFzx/view?usp=sharing";
 
   const navLinks = ["Home", "Projects", "Contact"];
 
@@ -23,7 +22,6 @@ function Navbar() {
     }
   };
 
-  // সিডি ডাউনলোড হ্যান্ডলার
   const handleDownloadCV = () => {
     window.open(CV_DOWNLOAD_URL, "_blank");
   };

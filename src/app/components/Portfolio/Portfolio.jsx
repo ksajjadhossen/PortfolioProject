@@ -26,14 +26,7 @@ const projects = [
     description:
       "Premium full-stack e-commerce platform built with Next.js 15 App Router, featuring secure Clerk Authentication, Role-Based Access Control (RBAC), and an authorized Admin Dashboard with real-time CRUD controls.",
     image: "/nextGear.png",
-    tech: [
-      "Next.js 15",
-      "TypeScript",
-      "Tailwind CSS",
-      "MongoDB",
-      "Mongoose",
-      "Clerk",
-    ],
+    tech: ["Next.js 15", "Tailwind CSS", "MongoDB", "Mongoose", "Firebase"],
     github: "https://github.com/ksajjadhossen/NextGear",
     live: "https://next-gear-iota.vercel.app/",
   },
@@ -42,7 +35,7 @@ const projects = [
     description:
       "High-performance, production-ready Kanban task management board featuring a smooth 5-stage drag-and-drop workflow, multi-tab synchronization via BroadcastChannel API, and advanced undo/redo history.",
     image: "/taskflow.png",
-    tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "BroadcastChannel API"],
+    tech: ["Next.js 14", "Tailwind CSS", "BroadcastChannel API"],
     github: "https://github.com/ksajjadhossen/taskflow",
     live: "https://taskflow-personal-app.vercel.app/",
   },
@@ -72,7 +65,7 @@ const Portfolio = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-[#1B1B1B] border border-white/5 rounded-xl overflow-hidden group hover:border-white/20 transition-all duration-300 w-full max-w-[380px]"
+              className="bg-[#1B1B1B] border border-white/5 rounded-xl overflow-hidden group hover:border-white/20 transition-all duration-300 w-full max-w-95"
             >
               <div className="relative aspect-video w-full overflow-hidden">
                 <Image
